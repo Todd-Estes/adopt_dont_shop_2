@@ -9,10 +9,10 @@ RSpec.describe "shelter update page", type: :feature do
 
 
   it "can see a link to update the shelter" do
-  visit "/shelters/#{shelter_1.id}"
+    visit "/shelters/#{shelter_1.id}"
 
     expect(page).to have_link('Update Shelter', :href=>"/shelters/#{shelter_1.id}/edit")
-  end
+    end
 
   it "clicks link and is taken to shelters/new" do
     shelter_1 = Shelter.create(name:      "City Shelter",
