@@ -36,7 +36,7 @@ class SheltersController < ApplicationController
       zip: params[:shelter][:zip]
       })
     shelter.save
-    redirect_to "/shelters"
+    redirect_to "/shelters/#{shelter.id}"
   end
 
   def destroy
