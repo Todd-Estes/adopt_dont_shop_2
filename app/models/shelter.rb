@@ -1,6 +1,6 @@
 class Shelter < ApplicationRecord
-has_many :songs
+has_many :pets
 
-  validates_presence_of :name
+validates_presence_of :name
 
 end
