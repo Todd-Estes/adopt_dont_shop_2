@@ -1,0 +1,9 @@
+<h1>Pets for Adoption</h1>
+
+<% @pets.each do |pet| %>
+<p><%= pet.image_url %></p>
+<p><%= pet.name %></p>
+<p><%= pet.approximate_age %></p>
+<p><%= pet.sex %></p>
+<p><%= pet.shelter_name %></p>
+<% end %>
