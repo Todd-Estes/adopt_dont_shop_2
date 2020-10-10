@@ -11,15 +11,28 @@ RSpec.describe 'shelter pets index' do
                                   name:               "Fido",
                                   approximate_age:    "1",
                                   sex:                "Male",
-                                  description:        "furry")
+                                  description:        "doge")
+    pet_2 = shelter_1.pets.create(image_url:          "google.com",
+                                  name:               "Scooter",
+                                  approximate_age:    "2",
+                                  sex:                "Female",
+                                  description:        "doge")
+
 
 
     visit "/shelters/#{shelter_1.id}/pets"
-    # require "pry"; binding.pry
+    require "pry"; binding.pry
 
     expect(page).to have_content(pet_1.image_url)
     expect(page).to have_content(pet_1.name)
     expect(page).to have_content(pet_1.approximate_age)
     expect(page).to have_content(pet_1.sex)
+
+    expect(page).to have_content(pet_2.image_url)
+    expect(page).to have_content(pet_2.name)
+    expect(page).to have_content(pet_2.approximate_age)
+    expect(page).to have_content(pet_2.sex)
+
+
   end
 end
