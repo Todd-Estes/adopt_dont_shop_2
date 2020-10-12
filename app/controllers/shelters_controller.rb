@@ -24,6 +24,7 @@ class SheltersController < ApplicationController
 
   def pets
     @pets = Shelter.find(params[:id]).pets
+    @shelter = Shelter.find(params[:id])
   end
 
   def edit

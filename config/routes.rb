@@ -13,6 +13,13 @@ delete '/shelters/:id', to: 'shelters#destroy'
 get '/pets', to: 'pets#index'
 get '/shelters/:id/pets', to: 'shelters#pets'
 get '/pets/:id', to: 'pets#show'
+get '/shelters/:id/pets/new', to: 'pets#new'
+get '/pets/:id/edit', to: 'pets#edit'
+post '/shelters/:id/pets', to: 'pets#create'
+patch '/pets/:id', to: 'pets#update'
+delete '/pets/:id', to: 'pets#destroy'
+
+
 
 
 end

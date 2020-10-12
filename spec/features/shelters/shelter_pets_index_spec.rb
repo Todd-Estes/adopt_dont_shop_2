@@ -21,7 +21,6 @@ RSpec.describe 'shelter pets index' do
 
 
     visit "/shelters/#{shelter_1.id}/pets"
-    require "pry"; binding.pry
 
     expect(page).to have_content(pet_1.image_url)
     expect(page).to have_content(pet_1.name)
@@ -32,6 +31,8 @@ RSpec.describe 'shelter pets index' do
     expect(page).to have_content(pet_2.name)
     expect(page).to have_content(pet_2.approximate_age)
     expect(page).to have_content(pet_2.sex)
+
+    
 
 
   end
