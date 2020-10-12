@@ -50,6 +50,7 @@ RSpec.describe "shelter pet creation" do
 
   expect(current_path).to eq("/shelters/#{shelter_1.id}/pets")
   expect(page).to have_content("google.com")
+  expect(page).to have_content("Skeeter")
   expect(page).to have_content("dog")
   expect(page).to have_content("1")
   expect(page).to have_content("male")

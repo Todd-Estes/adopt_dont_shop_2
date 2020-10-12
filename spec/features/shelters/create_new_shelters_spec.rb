@@ -36,7 +36,7 @@ RSpec.describe "shelter creation page", type: :feature do
     click_button 'Create Shelter'
 
     expect(current_path).to eq('/shelters')
-    expect(page).to have_content("Downtown Shelter")
+    expect(page).to have_content("Broadway Shelter")
   end
 
 

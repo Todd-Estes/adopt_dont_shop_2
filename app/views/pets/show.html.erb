@@ -1,8 +1,8 @@
 <h1><%= @pet.name %></h1>
 <p><%= @pet.image_url %></p>
+<p><%= @pet.description %></p>
 <p><%= @pet.approximate_age %></p>
 <p><%= @pet.sex %></p>
-<p><%= @pet.description %></p>
 
 <%= link_to 'Delete Pet', "/pets/#{@pet.id}", method: :delete %><br>
 
